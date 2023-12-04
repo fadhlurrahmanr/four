@@ -52,3 +52,14 @@ attributes2 = st.multiselect(
     "Pilih Indikator SDGs :",
     options = ['PDRB per Orang yang Bekerja', 'PDRB per Kapita', 'Keluhan Kesehatan per Bulan (Persen)', 'Keterbukaan Perdagangan', 'Sektor Formal', 'Pengangguran (Persen)', 'Indeks Pembangunan Manusia', 'Belanja Pemerintah', 'Belanja Modal Pemerintah', 'Kemiskinan (Persen)', 'Rasio Gini', 'Sanitasi yang Layak', 'Air Bersih', 'Tingkat Kelulusan Sekolah (SMA)', 'Pertanian', 'Angka Harapan Hidup', 'PDRB Nominal', 'Populasi (ribuan)', 'Investasi Sektor Swastan', 'PMA', 'PMDN'],
     default=['PDRB per Kapita'] )
+
+plot_bar = px.bar(df3,
+                  x = df["province"].unique(),
+                  y = attributes2,
+                 title = "Grafik Bar")
+
+plot_bar.update_layout(
+    xaxis_title = 'Provinsi' )
+
+st.plotly_chart(plot_bar)
+

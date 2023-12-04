@@ -39,3 +39,4 @@ plot_grafik = px.line(
 
 st.plotly_chart(plot_grafik)
 
+st.write("## 2. Statistik Seluruh Provinsi per Tahun")

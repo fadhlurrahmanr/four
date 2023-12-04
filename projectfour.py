@@ -15,3 +15,8 @@ st.write("## 1. Statistik per Provinsi")
 
 provinsi = st.selectbox(
     "Pilih Provinsi", df["province"].unique() )
+
+tahun = st.multiselect(
+    "Pilih tahun",
+    options = df["year"].unique(),
+    default = df["year"].unique() )

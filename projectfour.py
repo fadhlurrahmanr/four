@@ -44,3 +44,11 @@ st.write("## 2. Statistik Seluruh Provinsi per Tahun")
 tahun3 = st.selectbox(
     "Pilih Tahun",
     options = df["year"].unique() )
+
+df3 = df.query(
+    'year == @tahun3' )
+
+attributes2 = st.multiselect(
+    "Pilih Indikator SDGs :",
+    options = ['PDRB per Orang yang Bekerja', 'PDRB per Kapita', 'Keluhan Kesehatan per Bulan (Persen)', 'Keterbukaan Perdagangan', 'Sektor Formal', 'Pengangguran (Persen)', 'Indeks Pembangunan Manusia', 'Belanja Pemerintah', 'Belanja Modal Pemerintah', 'Kemiskinan (Persen)', 'Rasio Gini', 'Sanitasi yang Layak', 'Air Bersih', 'Tingkat Kelulusan Sekolah (SMA)', 'Pertanian', 'Angka Harapan Hidup', 'PDRB Nominal', 'Populasi (ribuan)', 'Investasi Sektor Swastan', 'PMA', 'PMDN'],
+    default=['PDRB per Kapita'] )

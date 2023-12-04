@@ -31,3 +31,11 @@ attributes = st.multiselect(
     "Pilih Indikator SDGs untuk ditampilkan menjadi Grafik:",
     options=['PDRB per Orang yang Bekerja', 'PDRB per Kapita', 'Keluhan Kesehatan per Bulan (Persen)', 'Keterbukaan Perdagangan', 'Sektor Formal', 'Pengangguran (Persen)', 'Indeks Pembangunan Manusia', 'Belanja Pemerintah', 'Belanja Modal Pemerintah', 'Kemiskinan (Persen)', 'Rasio Gini', 'Sanitasi yang Layak', 'Air Bersih', 'Tingkat Kelulusan Sekolah (SMA)', 'Pertanian', 'Angka Harapan Hidup', 'PDRB Nominal', 'Populasi (ribuan)', 'Investasi Sektor Swastan', 'PMA', 'PMDN'],
     default=['PDRB per Kapita'] )
+
+plot_grafik = px.line(
+    df2,
+    x = "year", y= attributes, 
+    title = "Grafik" )
+
+st.plotly_chart(plot_grafik)
+

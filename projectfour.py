@@ -8,3 +8,5 @@ st.write("""
 ## Mini Dashboard SDGs Indonesia
 
 """)
+
+df = pd.read_csv('data/inclusive.csv', sep = ',')

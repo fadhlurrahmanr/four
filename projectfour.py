@@ -10,3 +10,8 @@ st.write("""
 """)
 
 df = pd.read_csv('data/inclusive.csv', sep = ',')
+
+st.write("## 1. Statistik per Provinsi")
+
+provinsi = st.selectbox(
+    "Pilih Provinsi", df["province"].unique() )

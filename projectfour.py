@@ -39,7 +39,7 @@ plot_grafik = px.line(
 
 st.plotly_chart(plot_grafik)
 
-st.write("## 2. Statistik Seluruh Provinsi per Tahun")
+st.write("##### 2. Statistik Seluruh Provinsi per Tahun")
 
 tahun3 = st.selectbox(
     "Pilih Tahun",

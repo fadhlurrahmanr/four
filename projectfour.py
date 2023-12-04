@@ -26,3 +26,8 @@ df2 = df.query(
 )
 
 st.dataframe(df2)
+
+attributes = st.selectbox(
+    "Informasi yang ditampilkan:",
+    options=['hdi', 'grdp_capita', 'poverty', 'unemployed_percent', 'gov_spending'],
+)

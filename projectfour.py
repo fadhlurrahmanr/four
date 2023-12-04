@@ -20,3 +20,9 @@ tahun = st.multiselect(
     "Pilih tahun",
     options = df["year"].unique(),
     default = df["year"].unique() )
+
+df2 = df.query(
+    'province == @provinsi & year == @tahun'
+)
+
+st.dataframe(df2)

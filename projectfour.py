@@ -2,16 +2,16 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.write("""
-# Project Four
+st.title("Project Four")
 
-## Mini Dashboard SDGs Indonesia
+st.write("## Mini Dashboard SDGs Indonesia")
 
-""")
+st.write("#### Kelompok Four")
+st.markdown("Anggota Kelompok: Arina, Fadhlurrahman, Fijar, Nindya") 
 
 df = pd.read_csv('data/inclusive.csv', sep = ',')
 
-st.write("## 1. Statistik per Provinsi")
+st.write("##### 1. Statistik per Provinsi")
 
 provinsi = st.selectbox(
     "Pilih Provinsi", df["province"].unique() )

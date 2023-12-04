@@ -2,12 +2,19 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.title("Project Four")
 
-st.write("## Mini Dashboard SDGs Indonesia")
+st.title(":bar_chart: Mini Dashboard SDGs Indonesia")
 
-st.write("#### Kelompok Four")
-st.markdown("Anggota Kelompok: Arina, Fadhlurrahman, Fijar, Nindya") 
+st.write("### by Four")
+
+#st.write("#### Kelompok Four")
+st.write("""Anggota Kelompok:
+1. Arina Nur Fitri
+2. Fadhlurrahman Ruslan
+3. Fijar Akram Fadlullah
+4. Nindya Syaftita""") 
+
+st.write("")
 
 df = pd.read_csv('data/inclusive.csv', sep = ',')
 

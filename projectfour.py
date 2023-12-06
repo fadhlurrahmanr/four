@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 
-st.title(":bar_chart: Mini Dashboard SDGs Indonesia")
+st.title(":bar_chart: Mini Dashboard Pertumbuhan Inklusif Indonesia")
 
 st.write("### by Four")
 

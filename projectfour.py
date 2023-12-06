@@ -28,7 +28,7 @@ df3 = df.query(
     'year == @tahun3' )
 
 attributes = st.multiselect(
-    "Pilih Indikator SDGs :",
+    "Pilih Indikator Pertumbuhan Inklusif:",
     options = ['PDRB per Orang yang Bekerja', 'PDRB per Kapita', 'Keluhan Kesehatan per Bulan (Persen)', 'Keterbukaan Perdagangan', 'Sektor Formal', 'Pengangguran (Persen)', 'Indeks Pembangunan Manusia', 'Belanja Pemerintah', 'Belanja Modal Pemerintah', 'Kemiskinan (Persen)', 'Rasio Gini', 'Sanitasi yang Layak', 'Air Bersih', 'Tingkat Kelulusan Sekolah (SMA)', 'Pertanian', 'Angka Harapan Hidup', 'PDRB Nominal', 'Populasi (ribuan)', 'Investasi Sektor Swastan', 'PMA', 'PMDN'],
     default=['PDRB per Kapita'] )
 
@@ -59,15 +59,15 @@ df2 = df.query(
 
 st.dataframe(df2)
 
-attributes2 = st.multiselect(
-    "Pilih Indikator SDGs untuk ditampilkan menjadi Grafik:",
-    options=['PDRB per Orang yang Bekerja', 'PDRB per Kapita', 'Keluhan Kesehatan per Bulan (Persen)', 'Keterbukaan Perdagangan', 'Sektor Formal', 'Pengangguran (Persen)', 'Indeks Pembangunan Manusia', 'Belanja Pemerintah', 'Belanja Modal Pemerintah', 'Kemiskinan (Persen)', 'Rasio Gini', 'Sanitasi yang Layak', 'Air Bersih', 'Tingkat Kelulusan Sekolah (SMA)', 'Pertanian', 'Angka Harapan Hidup', 'PDRB Nominal', 'Populasi (ribuan)', 'Investasi Sektor Swastan', 'PMA', 'PMDN'],
-    default=['PDRB per Kapita'] )
+#attributes2 = st.multiselect(
+ #   "Pilih Indikator Pertumbuhan Inklusif:",
+ #   options=['PDRB per Orang yang Bekerja', 'PDRB per Kapita', 'Keluhan Kesehatan per Bulan (Persen)', 'Keterbukaan Perdagangan', 'Sektor Formal', 'Pengangguran (Persen)', 'Indeks Pembangunan Manusia', 'Belanja Pemerintah', 'Belanja Modal Pemerintah', 'Kemiskinan (Persen)', 'Rasio Gini', 'Sanitasi yang Layak', 'Air Bersih', 'Tingkat Kelulusan Sekolah (SMA)', 'Pertanian', 'Angka Harapan Hidup', 'PDRB Nominal', 'Populasi (ribuan)', 'Investasi Sektor Swastan', 'PMA', 'PMDN'],
+  #  default=['PDRB per Kapita'] )
 
 plot_grafik = px.line(
     df2,
-    x = "year", y= attributes2, 
-    title = "Grafik" )
+    x = "year", y= attributes, 
+    title = "Grafik Line" )
 
 st.plotly_chart(plot_grafik)
 

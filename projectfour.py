@@ -9,12 +9,12 @@ st.write("### by Four")
 
 #st.write("#### Kelompok Four")
 st.write("""Anggota Kelompok:
-1. Arina Nur Fitri
-2. Fadhlurrahman Ruslan
-3. Fijar Akram Fadlullah
-4. Nindya Syaftita""") 
+1. Arina Nur Fitri 021002214001
+2. Fadhlurrahman Ruslan 021002214003
+3. Fijar Akram Fadlullah 021002214004
+4. Nindya Syaftita 021002214009""") 
 
-st.write("")
+st.write("Dosen Pengampu: Sri Yani K dan Anung Ariwibowo")
 
 df = pd.read_csv('data/inclusive.csv', sep = ',')
 
@@ -64,5 +64,5 @@ plot_grafik = px.line(
 
 st.plotly_chart(plot_grafik)
 
-st.write("Download Data")
+st.write("##### Download Data")
 st.dataframe(df2)
